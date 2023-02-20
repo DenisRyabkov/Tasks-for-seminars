@@ -6,14 +6,14 @@
 Console.WriteLine("Введите число");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int reminder;
+int lastDigit;
 int revers = 0;
 int temp = number;
 
 while (number > 0)
 {
-    reminder = number % 10;
-    revers = revers * 10 + reminder;
+    lastDigit = number % 10;
+    revers = revers * 10 + lastDigit;
     number = number / 10;
 }
 
