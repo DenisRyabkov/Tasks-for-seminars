@@ -7,13 +7,13 @@ Console.WriteLine("Введите число");
 int number = Convert.ToInt32(Console.ReadLine());
 
 int reminder;
-int revers = 0;
+int sum = 0;
 int temp = number;
 
 while (number > 0)
 {
     reminder = number % 10;
-    revers = revers * 10 + reminder;
+    sum = sum * 10 + reminder;
     number = number / 10;
 }
 
@@ -22,7 +22,7 @@ else Console.WriteLine($"Число {temp} НЕ полиндром");
 
 bool IsPalindrome (int number) 
 {
-    if (temp == revers)
+    if (temp == sum)
     return true;
     return false;
 }  

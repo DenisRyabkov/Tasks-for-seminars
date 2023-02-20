@@ -5,7 +5,7 @@
 Console.WriteLine("Введите число");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number<0) Console.WriteLine("Введено не корректное число");
+if (number<1) Console.WriteLine("Введено не корректное число");
 else
 {
 int index = 1;
