@@ -36,56 +36,36 @@ double GetMaxNumber(double[] arr)
     }
     return max;
 }
-//double getMaxNumber = GetMaxNumber();
-GetMaxNumber();
 
-
-//double GetMinNumber (double[] arr)
-/*{
-    double min = arr [0];
-    minIndex = 0;
-    for (int i = 0; i < arr.Length; i++)
+double GetMinNumber(double[] arr)
 {
-	if (min > arr [i])
+    double min = arr[0];
+    for (int i = 1; i < arr.Length; i++)
     {
-        min = arr [i];
-        minIndex = i;
+        if (min > arr[i])
+        {
+            min = arr[i];
+        }
     }
-}
-return min;
-}*/
-
-/*double GetMaxNumber (double[] arr)
-{
-    double max = arr [0];
-    maxIndex = 0;
-    for (int i = 0; i < arr.Length; i++)
-{
-	if (max < arr[i])
-    {
-       max = arr [i];
-       maxIndex = i; 
-    }
-}
-return max;
+    return min;
 }
 
-double GetResultNumber (double[] arr)
+double GetDifferensNumber(double min, double max)
 {
-{
-    double result = 0;
-    result = max - min;
+    double diff = max - min;
+   
+    return diff;
 }
-return result;
-}
-*/
+
 double[] array = CreateArrayRndDouble(5, 1, 5);
 PrintArrayDouble(array);
 Console.WriteLine();
 
-//double getMinNumber = GetMinNumber(array);
-//double getMaxNumber = GetMaxNumber(array);
-//double getResultNumber = GetResultNumber(array);
-//Console.WriteLine($"минимальное число = {getMinNumber}");
-//Console.WriteLine($"максимальное число = {getMaxNumber}");
-//Console.WriteLine($" разница чисел = {getResultNumber}");
+double getMaxNumber = GetMaxNumber(array);
+Console.WriteLine($"максимальное число = {Math.Round(getMaxNumber,2)}");
+
+double getMinNumber = GetMinNumber(array);
+Console.WriteLine($"минимальное число = {Math.Round(getMinNumber,2)}");
+
+//double getDifferensNumber = GetDifferensNumber(array);
+//Console.WriteLine($"Разница = {Math.Round(getDifferensNumber,2)}");
