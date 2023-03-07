@@ -50,12 +50,7 @@ double GetMinNumber(double[] arr)
     return min;
 }
 
-double GetDifferensNumber(double min, double max)
-{
-    double diff = max - min;
-   
-    return diff;
-}
+
 
 double[] array = CreateArrayRndDouble(5, 1, 5);
 PrintArrayDouble(array);
@@ -67,5 +62,11 @@ Console.WriteLine($"максимальное число = {Math.Round(getMaxNumb
 double getMinNumber = GetMinNumber(array);
 Console.WriteLine($"минимальное число = {Math.Round(getMinNumber,2)}");
 
-//double getDifferensNumber = GetDifferensNumber(array);
-//Console.WriteLine($"Разница = {Math.Round(getDifferensNumber,2)}");
+double GetDifferensNumber(double min, double max)
+{
+    double diff =  max-min ;
+    return diff;
+ }
+
+double getDifferensNumber = GetDifferensNumber(getMinNumber,getMaxNumber);
+ Console.WriteLine($"Разница = {Math.Round(getDifferensNumber,2)}");
