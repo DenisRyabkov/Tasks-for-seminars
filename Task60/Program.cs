@@ -37,6 +37,6 @@ void PrintMatrix(int[,,] matrix)
 }
 }
 
-int[,,] matrix = CreateMatrixRndInt(2,2,2,0,10);
+int[,,] matrix = CreateMatrixRndInt(2,2,2,10,100);
 
 PrintMatrix(matrix);
